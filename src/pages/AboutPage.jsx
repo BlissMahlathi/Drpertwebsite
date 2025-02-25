@@ -54,7 +54,10 @@ const AboutPage = () => {
                         their most confident selves.
                         <br />
                         <br />
-                        <strong className="text-purple-800">
+                        <strong
+                            className=" text-gradient-to-r text-gradient-to-r 
+                        "
+                        >
                             We are Africa’s true representation of luxury,
                             beauty, and self-love.
                         </strong>
@@ -62,7 +65,7 @@ const AboutPage = () => {
                     <div className="mt-12 flex justify-center">
                         <Link to="/contact">
                             <button className="bg-purple-800 text-white px-6 py-3 rounded-lg hover:bg-bluish-pink transition duration-300">
-                                Book a Consultation
+                                get in touch with us
                             </button>
                         </Link>
                     </div>
@@ -92,12 +95,12 @@ const AboutPage = () => {
 
             <section
                 id="cta"
-                className="py-16 bg-purple-800 text-white text-center mt-48"
+                className="py-16 bg-purple-800 text-white text-center sm:pb-28"
             >
                 <h3 className="text-3xl font-semibold">
                     Ready for Your Transformation?
                 </h3>
-                <p className="mt-4 text-lg max-w-3xl mx-auto">
+                <p className=" text-lg max-w-3xl mx-auto">
                     Join the many individuals who have embraced their beauty and
                     transformed their lives with Dr. Pert's body sculpting
                     treatments.

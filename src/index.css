@@ -50,3 +50,9 @@ text-shadow-md {
 .service-card.flipped .back {
   transform: rotateY(0deg);
 }
+.text-gradient-to-r {
+  background: linear-gradient(to right, #7A0BC0, #C7B8EA, #C7B8EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

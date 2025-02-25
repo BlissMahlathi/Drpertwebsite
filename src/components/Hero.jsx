@@ -55,19 +55,19 @@ const Hero = () => {
             opacity: 1,
             y: 30,
             duration: 2,
-            delay: 2
+            delay: 1
         });
 
         const interval = setInterval(() => {
             gsap.to(".hero-section", {
                 opacity: 0,
-                duration: 1,
+                duration: 2,
                 onComplete: () => {
                     setCurrentImage(prev => (prev + 1) % images.length);
-                    gsap.to(".hero-section", { opacity: 1, duration: 1 });
+                    gsap.to(".hero-section", { opacity: 1, duration: 3 });
                 }
             });
-        }, 5000);
+        }, 7000);
 
         return () => clearInterval(interval);
     }, [currentImage]);
@@ -89,16 +89,6 @@ const Hero = () => {
                 <p className="hero-motto mt-4 text-lg sm:text-3xl md:text-4xl opacity-85 font-italic max-w-3xl mx-auto text-gray-200">
                     {texts[currentImage].motto}
                 </p>
-
-        
-                <div className="mt-10 flex justify-center">
-                    <a
-                        href="/services"
-                        className="cta-button px-[2rem] py-2 bg-blue-500 text-slate-900 rounded-lg font-semibold hover:bg-yellow-600 transition ease-in-out duration-300"
-                    >
-                        Explore Our Services
-                    </a>
-                </div>
             </div>
         </section>
     );

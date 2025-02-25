@@ -109,8 +109,8 @@ const BodySculptingPage = () => {
                     consultation to recovery.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div className="bg-white shadow-lg rounded-lg p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+                    <div className="bg-white shadow-lg rounded-lg p-6 border border-purple-300 border-r">
                         <h3 className="text-xl font-semibold mb-4">
                             Consultation
                         </h3>
@@ -122,7 +122,10 @@ const BodySculptingPage = () => {
                         </p>
                     </div>
 
-                    <div className="bg-white shadow-lg rounded-lg p-6">
+                    <div
+                        className="bg-white shadow-lg rounded-lg p-6 border-purple-300 border hover:border-1/2
+                  "
+                    >
                         <h3 className="text-xl font-semibold mb-4">
                             Preparation
                         </h3>
@@ -134,7 +137,10 @@ const BodySculptingPage = () => {
                         </p>
                     </div>
 
-                    <div className="bg-white shadow-lg rounded-lg p-6">
+                    <div
+                        className="bg-white shadow-lg rounded-lg p-6 border border-purple-300
+                    "
+                    >
                         <h3 className="text-xl font-semibold mb-4">
                             The Procedure
                         </h3>
@@ -147,7 +153,10 @@ const BodySculptingPage = () => {
                         </p>
                     </div>
 
-                    <div className="bg-white shadow-lg rounded-lg p-6">
+                    <div
+                        className="bg-white shadow-lg rounded-lg p-6 border border-purple-300
+                    "
+                    >
                         <h3 className="text-xl font-semibold mb-4">Recovery</h3>
                         <p>
                             Our commitment to exceptional care and recovery has
@@ -212,7 +221,6 @@ const BodySculptingPage = () => {
                 <h2 className="text-center text-3xl font-bold mb-6">
                     Frequently Asked Questions
                 </h2>
-
 
                 <div className="mb-8">
                     <h3 className="text-2xl font-semibold mb-4">Liposuction</h3>
