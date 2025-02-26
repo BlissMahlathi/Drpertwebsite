@@ -19,18 +19,18 @@ function Navbar() {
                     <img
                         src={LogoImg}
                         alt="Clinic Logo"
-                        className=""
                         width="100px"
                         height="70px"
                     />
                 </Link>
 
+                {/* Desktop Navigation */}
                 <ul className="hidden md:flex space-x-6">
                     {NAV_ITEMS.map((item, index) => (
                         <li key={item.name} className="relative group">
                             {item.subItems ? (
                                 <>
-                                    <button className="hover:text-yellow-400">
+                                    <button className="hover:text-blue-400 hover:underline">
                                         {item.name}
                                     </button>
                                     <ul className="absolute left-0 hidden group-hover:block bg-purple-800 p-2 rounded shadow-md">
@@ -38,7 +38,7 @@ function Navbar() {
                                             <li key={subItem.name}>
                                                 <Link
                                                     to={subItem.path}
-                                                    className="block px-4 py-2 hover:bg-purple-700"
+                                                    className="block px-4 py-2 hover:bg-purple-700 hover:underline"
                                                 >
                                                     {subItem.name}
                                                 </Link>
@@ -49,7 +49,7 @@ function Navbar() {
                             ) : (
                                 <Link
                                     to={item.path}
-                                    className="hover:text-amber-300"
+                                    className="hover:text-blue-300 hover:underline"
                                 >
                                     {item.name}
                                 </Link>
@@ -58,6 +58,7 @@ function Navbar() {
                     ))}
                 </ul>
 
+                {/* Mobile Menu Button */}
                 <button
                     className="text-3xl md:hidden"
                     onClick={() => setIsOpen(!isOpen)}
@@ -67,6 +68,7 @@ function Navbar() {
                 </button>
             </div>
 
+            {/* Mobile Navigation */}
             <ul
                 className={`md:hidden absolute left-0 top-16 w-full bg-purple-900 bg-opacity-60 text-center transition-all ease-in-out duration-300 ${
                     isOpen ? "block opacity-100" : "hidden opacity-0"
@@ -81,7 +83,7 @@ function Navbar() {
                             <>
                                 <button
                                     onClick={() => toggleDropdown(index)}
-                                    className="w-full text-center"
+                                    className="w-full text-center hover:underline"
                                 >
                                     {item.name}
                                 </button>
@@ -100,7 +102,7 @@ function Navbar() {
                                                     setIsOpen(false);
                                                     setOpenDropdown(null);
                                                 }}
-                                                className="block px-4 py-2 hover:bg-purple-700"
+                                                className="block px-4 py-2 hover:bg-purple-700 hover:underline"
                                             >
                                                 {subItem.name}
                                             </Link>
@@ -112,7 +114,7 @@ function Navbar() {
                             <Link
                                 to={item.path}
                                 onClick={() => setIsOpen(false)}
-                                className="block px-4 py-2 hover:bg-purple-700"
+                                className="block px-4 py-2 hover:bg-purple-700 hover:underline"
                             >
                                 {item.name}
                             </Link>
