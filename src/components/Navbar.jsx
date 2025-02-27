@@ -8,12 +8,12 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null);
 
-    const toggleDropdown = index => {
+    const toggleDropdown = (index) => {
         setOpenDropdown(openDropdown === index ? null : index);
     };
 
     return (
-        <nav className="max-sm:bg-gray-500/25 bg-blue-300 bg-opacity-75 text-white p-4 fixed w-full top-0 left-0 z-50">
+        <nav className="max-sm:bg-gray-500/25 bg-white text-lavender-400 p-4 fixed w-full top-0 left-0 z-50">
             <div className="container mx-auto flex justify-between items-center">
                 <Link to="/" className="text-2xl font-bold">
                     <img
@@ -30,11 +30,11 @@ function Navbar() {
                         <li key={item.name} className="relative group">
                             {item.subItems ? (
                                 <>
-                                    <button className="hover:text-blue-400 hover:underline">
+                                    <button className="text-lavender-400 hover:text-blue-300 hover:underline">
                                         {item.name}
                                     </button>
                                     <ul className="absolute left-0 hidden group-hover:block bg-purple-800 p-2 rounded shadow-md">
-                                        {item.subItems.map(subItem => (
+                                        {item.subItems.map((subItem) => (
                                             <li key={subItem.name}>
                                                 <Link
                                                     to={subItem.path}
@@ -49,7 +49,7 @@ function Navbar() {
                             ) : (
                                 <Link
                                     to={item.path}
-                                    className="hover:text-blue-300 hover:underline"
+                                    className="text-lavender-400 hover:text-blue-300 hover:underline"
                                 >
                                     {item.name}
                                 </Link>
@@ -75,26 +75,21 @@ function Navbar() {
                 }`}
             >
                 {NAV_ITEMS.map((item, index) => (
-                    <li
-                        key={item.name}
-                        className="p-4 border-b border-purple-700"
-                    >
+                    <li key={item.name} className="p-4 border-b border-purple-700">
                         {item.subItems ? (
                             <>
                                 <button
                                     onClick={() => toggleDropdown(index)}
-                                    className="w-full text-center hover:underline"
+                                    className="w-full text-center text-lavender-400 hover:text-blue-300 hover:underline"
                                 >
                                     {item.name}
                                 </button>
                                 <ul
                                     className={`bg-purple-300 bg-opacity-60 transition-all duration-300 ${
-                                        openDropdown === index
-                                            ? "block"
-                                            : "hidden"
+                                        openDropdown === index ? "block" : "hidden"
                                     }`}
                                 >
-                                    {item.subItems.map(subItem => (
+                                    {item.subItems.map((subItem) => (
                                         <li key={subItem.name} className="py-2">
                                             <Link
                                                 to={subItem.path}
@@ -114,7 +109,7 @@ function Navbar() {
                             <Link
                                 to={item.path}
                                 onClick={() => setIsOpen(false)}
-                                className="block px-4 py-2 hover:bg-purple-700 hover:underline"
+                                className="block px-4 py-2 text-lavender-400 hover:text-blue-300 hover:underline"
                             >
                                 {item.name}
                             </Link>
