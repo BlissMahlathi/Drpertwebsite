@@ -70,7 +70,7 @@ function Navbar() {
 
             {/* Mobile Navigation */}
             <ul
-                className={`md:hidden absolute left-0 top-16 w-full bg-purple-900 bg-opacity-60 text-center transition-all ease-in-out duration-300 ${
+                className={`md:hidden absolute left-0 top-16 w-full bg-purple-900 bg-opacity-95 text-center transition-all ease-in-out duration-300 ${
                     isOpen ? "block opacity-100" : "hidden opacity-0"
                 }`}
             >
